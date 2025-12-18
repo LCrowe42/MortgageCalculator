@@ -12,6 +12,7 @@ button {
     width: 300px;
 }
 .results {
+    color: rgb(180,180,180);
     background-color: rgb(15,50,65);
     width: 300px;
     border-bottom-left-radius: 80px;
@@ -43,6 +44,15 @@ button {
     height: 30px;
     font-size: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.outputbox {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  color: rgb(255,255,255);
 }
 #clearAll {
     position: relative;
