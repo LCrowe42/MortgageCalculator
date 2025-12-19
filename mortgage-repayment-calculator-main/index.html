@@ -10,6 +10,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" async></script>
 </head>
 <body>
     <div class="container">
@@ -25,27 +26,26 @@
       <input type="number" id="term" name="term" value="5">Years<br>
       
       <label for="rate">Interest Rate</label><br>
-      <input type="number" id="rate" name="rate" value="5.25">%<br>
+      <input type="number" id="rate" name="rate" step=".25" value="5.25">%<br>
       <fieldset>
         <legend>Mortgage Type</legend>
-        <input type="radio" id="repayment" name="mtype" value="Repayment">
+        <input type="radio" id="repayment" name="mtype" checked="checked" value="Repayment">
         <label for="repayment">Repayment</label><br>
         <input type="radio" id="interestonly" name="mtype" value="Interest Only">
         <label for="interestonly">Interest Only</label><br>
       </fieldset>
-      <input class="submit" type="submit" value="Calculate Repayments">
+      <input id="submit" type="button" onclick="calculate()" value="Calculate Repayments">
       </form>
       <div class="results">
       <!-- Empty results start -->
-      <div></div>
-      <p class="monthlypayments">Results shown here</p>
+      <output id="monthlypayments">Results shown here</output><br>
 
-      <p class="">Complete the form and click “calculate repayments” to see what 
-      your monthly repayments would be.
+      <output id="total">Complete the form and click “calculate repayments” to see what 
+      your monthly repayments would be.</output>
 
       <!-- Empty results end -->
 
-      <!-- Completed results start -->
+      <!-- Completed results start
 
       Your results
 
@@ -56,7 +56,7 @@
 
       Total you'll repay over the term
 
-      <!-- Completed results end -->
+      Completed results end -->
       </div>
     </div>
   
