@@ -12,4 +12,5 @@ function calculate() {
     repaymentsElement.textContent = repayments.toFixed(2).toString();
     const totalElement = document.getElementById("total");
     totalElement.textContent = total.toFixed(2).toString();
+    
 }
