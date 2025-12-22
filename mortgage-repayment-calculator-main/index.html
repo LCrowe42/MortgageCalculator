@@ -8,16 +8,16 @@
   
   <title>Mortgage Calculator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" async></script>
 </head>
 <body>
     <div class="container">
+      <div class="containerouter"></div>
       <form class="inputform">
-      <p class="title">Mortgage Calculator</p>
+      <p class="calctitle">Mortgage Calculator</p>
 
-      <button id="clearAll">Clear All</button><br>
+      <button id="clearall">Clear All</button><br>
       
       <label for="amount">Mortgage Amount</label><br>
       <input type="number" id="amount" name="amount" value="200000">$<br>
@@ -29,41 +29,27 @@
       <input type="number" id="rate" name="rate" step=".25" value="5.25">%<br>
       <fieldset>
         <legend>Mortgage Type</legend>
-        <input type="radio" id="repayment" name="mtype" checked="checked" value="Repayment">
-        <label for="repayment">Repayment</label><br>
-        <input type="radio" id="interestonly" name="mtype" value="Interest Only">
-        <label for="interestonly">Interest Only</label><br>
+        <div class="repaymentbox">
+          <input type="radio" id="repayment" name="mtype" checked="checked" value="Repayment">
+          <label for="repayment">Repayment</label>
+        </div>
+        <div class="interestonlybox">
+          <input type="radio" id="interestonly" name="mtype" value="Interest Only">
+          <label for="interestonly">Interest Only</label>
+        </div>
       </fieldset>
       <input id="submit" type="button" onclick="calculate()" value="Calculate Repayments">
       </form>
-      <div class="results">
-      <!-- Empty results start -->
-      <output id="monthlypayments">Results shown here</output><br>
-
-      <output id="total">Complete the form and click “calculate repayments” to see what 
-      your monthly repayments would be.</output>
-      
-
-      <!-- Empty results end -->
-
-      <!-- Completed results start
-
-      Your results
-
-      Your results are shown below based on the information you provided. 
-      To adjust the results, edit the form and click “calculate repayments” again.
-
-      Your monthly repayments
-
-      Total you'll repay over the term
-
-      Completed results end -->
+      <div id="results">
+        <img class="emptyimage" src="\assets\images\illustration-empty.svg">
+        <p class="emptytitle">Results shown here</p>
+        <p class="emptytext">Complete the form and click "calculate repayments" to see what your monthly repayments would be</p>
       </div>
     </div>
   
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="https://www.linkedin.com/in/lucas-crowe-tu/">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://www.linkedin.com/in/lucas-crowe-tu/">Lucas Crowe</a>.
+  </footer>
 </body>
 </html>
