@@ -1,11 +1,13 @@
 function generateResultsRepayment(repayments, total) {
-    let repstring = repayments.toLocaleString("en-US", {style:"currency", currency:"USD"});
-    let totstring = total.toLocaleString("en-US", {style:"currency", currency:"USD"});
+    const repstring = repayments.toLocaleString("en-US", {style:"currency", currency:"USD"});
+    const totstring = total.toLocaleString("en-US", {style:"currency", currency:"USD"});
     return `
         <p class="otitle">Your results</p>
         <p class="obody">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
         <div class="obox">
+            <p class="repaymentstext">Your monthly payments</p>
             <output class="monthlypayments">${repstring}</output>
+            <p class="totaltext">Total you'll repay over the term</p>
             <output class="total">${totstring}</output>
         </div>
     `;
