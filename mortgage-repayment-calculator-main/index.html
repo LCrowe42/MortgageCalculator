@@ -15,21 +15,28 @@
   <div class="containerouter"></div>
   <div class="container">
     <form class="inputform">
-      <p class="calctitle">Mortgage Calculator</p>
-
-      <button id="clearall">Clear All</button><br>
-        
+      <div class="formtopline">
+        <p class="calctitle">Mortgage Calculator</p>
+        <button id="clearall">Clear All</button>
+      </div>
       <label for="amount">Mortgage Amount</label>
       <div class="amountbox">
-        <input type="number" id="amount" name="amount" value="200000"><p class="tag">$</p>
+        <p class="amounttag">$</p>
+        <input type="number" class="numinput" id="amount" name="amount" value="200000">
       </div>
-      <label for="term">Mortgage Term</label>
-      <div class="termbox">
-        <input type="number" id="term" name="term" value="5"><p class="tag">years</p>
-      </div>
-      <label for="rate">Interest Rate</label>
-      <div class="ratebox">
-        <input type="number" id="rate" name="rate" step=".25" value="5.25"><p class="tag">$</p>
+      <div class="termandrate">
+        <div>
+          <label for="term">Mortgage Term</label>
+            <div class="termbox">
+              <input type="number" class="numinput" id="term" name="term" value="5"><p class="termtag">years</p>
+            </div>
+          </div>
+        <div>
+          <label for="rate">Interest Rate</label>
+          <div class="ratebox">
+            <input type="number" class="numinput" id="rate" name="rate" step=".25" value="5.25"><p class="ratetag">%</p>
+          </div>
+        </div>
       </div>
       <fieldset>
         <legend>Mortgage Type</legend>

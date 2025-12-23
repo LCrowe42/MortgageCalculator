@@ -1,15 +1,12 @@
 @import url('fonts.googleapis.com');
-html {
-    display: table;
-    margin: auto;
-    height: 100%;
-}
 body {
     background: rgb(253, 253, 240);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
-    vertical-align: middle;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 100px;
 }
 .container {
     display: flex;
@@ -18,27 +15,25 @@ body {
     height: 500px;
     background-color: rgb(255,255,255);
     border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    transform: translate(-50%, -50%);
+    margin: 100px;
 }
 .containerouter {
     position: absolute;
     background-color: rgb(205, 243, 252);
     width: 1200px;
     height: 800px;
+    bottom: 50%;
+    transform: translate(0%,50%);
     z-index: -1;
     box-shadow: -10px 10px 5px rgb(167, 171, 172);
-    top: 50%;
-    bottom: 50%;
-    transform: translate(-50%, -50%);
 }
 .inputform {
     padding: 10px;
+    padding-right: 20px;
     width: 400px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 #results {
     color: rgb(243, 239, 239);
@@ -60,10 +55,21 @@ fieldset {
     border: 0;
     padding: 0px;
 }
+.formtopline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 button {
-    background: rgb(98, 178, 196);
+    background: rgb(205, 243, 252);
     border-radius: 10px;
     cursor: pointer;
+}
+.numinput {
+    font-size: 20px;
+    border: 0;
+    padding: 10px;
+    width: 100%;
 }
 .obox {
     border-top: solid rgb(155, 155, 35) 3px;
@@ -97,10 +103,11 @@ button {
     background-color: rgb(192, 192, 45);
 }
 .repaymentbox, .interestonlybox {
-    border: solid 1px;
+    border: solid 2px rgb(131, 131, 131);
     padding: 2px;
     margin: 4px;
-    width: 167px
+    width: 300px;
+    accent-color: rgb(192, 192, 45);
 }
 .outputbox {
   width: 300px;
@@ -112,10 +119,10 @@ button {
   color: rgb(255,255,255);
 }
 #clearall {
-    position: relative;
-    left: 220px;
-    bottom: 45px;
     width: 80px;
+    height: 20px;
+    position: relative;
+    top: 20px;
 }
 #clearall:hover {
     background: rgb(83, 151, 167);
@@ -152,4 +159,61 @@ button {
 }
 .total {
     font-size: 20px;
+}
+.amountbox {
+    display: flex;
+    font-size: 20px;
+    width: 300px;
+    border: solid rgb(131, 131, 131) 2px;
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.termbox {
+    display: flex;
+    font-size: 20px;
+    width: 160px;
+    border: solid rgb(131, 131, 131) 2px;
+    border-radius: 5px;
+    height: 30px;
+}
+.ratebox {
+    display: flex;
+    font-size: 20px;
+    width: 160px;
+    border: solid rgb(131, 131, 131) 2px;
+    border-radius: 5px;
+    height: 30px;
+}
+.amounttag {
+    text-align: center;
+    border-right: solid rgb(131, 131, 131) 2px;
+    border-radius: 5px;
+    margin: 0;
+    padding: 3px;
+    width: 10%;
+    background-color: rgb(205, 243, 252);
+}
+.termtag {
+    text-align: center;
+    border-left: solid rgb(131, 131, 131) 2px;
+    border-radius: 5px;
+    margin: 0;
+    padding: 3px;
+    width: 30%;
+    background-color: rgb(205, 243, 252);
+}
+.ratetag {
+    text-align: center;
+    border-left: solid rgb(131, 131, 131) 2px;
+    border-radius: 5px;
+    margin: 0;
+    padding: 3px;
+    width: 30%;
+    background-color: rgb(205, 243, 252);
+}
+.termandrate {
+    display: flex;
+    justify-content: space-between;
 }
