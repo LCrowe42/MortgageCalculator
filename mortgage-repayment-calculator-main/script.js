@@ -23,9 +23,17 @@ function calculate() {
         const numberOfPayments = term * 12;
         const repayments = Number((amount * (rate * (1 + rate) ** numberOfPayments) / ((1 + rate) ** numberOfPayments - 1)).toFixed(2));
         const total = Number((repayments * numberOfPayments).toFixed(2));
-
         const resultsContainer = document.getElementById("results");
         resultsContainer.innerHTML = generateResultsRepayment(repayments, total);
     }
+    else {
+        const numberOfPayments = term * 12;
+        const repayments = Number((rate*amount).toFixed(2));
+        const total = Number((repayments*numberOfPayments).toFixed(2));
+        const resultsContainer = document.getElementById("results");
+        resultsContainer.innerHTML = generateResultsRepayment(repayments, total);
+    }
+
+
 
 }
