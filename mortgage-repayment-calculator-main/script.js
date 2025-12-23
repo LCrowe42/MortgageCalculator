@@ -20,8 +20,10 @@ function calculate() {
     const term = document.getElementById("term").value;
     const rate = document.getElementById("rate").value / 100 / 12;
     const interestOnly = document.getElementById("interestonly").checked;
-    
-    if (!interestOnly) {
+    if (amount == '' || term == '' || rate == '') {
+        location.reload();
+    }
+    else if (!interestOnly) {
         const numberOfPayments = term * 12;
         const repayments = Number((amount * (rate * (1 + rate) ** numberOfPayments) / ((1 + rate) ** numberOfPayments - 1)).toFixed(2));
         const total = Number((repayments * numberOfPayments).toFixed(2));
