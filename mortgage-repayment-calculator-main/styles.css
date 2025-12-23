@@ -6,10 +6,8 @@ html {
 }
 body {
     background: rgb(253, 253, 240);
-    padding: 100px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
-    display: table-cell;
     vertical-align: middle;
     height: 100%;
 }
@@ -17,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     width: 800px;
-    height: 700px;
+    height: 500px;
     background-color: rgb(255,255,255);
     border-radius: 10px;
     position: absolute;
@@ -50,6 +48,13 @@ body {
     border-bottom-right-radius: 10px;
     padding: 10px;
     width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.ocontainer {
+    position: relative;
+    bottom: 60px;
 }
 fieldset {
     border: 0;
@@ -68,10 +73,10 @@ button {
     padding: 5px;
     display: flex;
     flex-direction: column;
-
 }
 .calctitle {
     font-size: 20px;
+    font-weight: bold;
 }
 .attribution {
     padding: 10px;
@@ -116,24 +121,35 @@ button {
     background: rgb(83, 151, 167);
 }
 .emptyimage {
-    position: relative;
-    left: 120px;
-    top: 150px;
-    height: 150px;
-    width: 150px;
+    width: 180px;
+    transform: translate(50%);
 }
 .emptytitle {
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
-    position: relative;
-    top: 150px
 }
 .emptytext {
     text-align: center;
-    position: relative;
-    top: 160px;
-    justify-content: center;
 }
 .otitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+.obody {
+    padding-bottom: 20px;
+}
+.repaymentstext {
+    color: rgb(131, 131, 131);
+}
+.monthlypayments {
+    font-size: 40px;
+    color: rgb(220,220,50);
+    border-bottom: solid rgb(70, 70, 70) 2px;
+    padding-bottom: 20px;
+}
+.totaltext {
+    color: rgb(131, 131, 131);
+}
+.total {
     font-size: 20px;
 }

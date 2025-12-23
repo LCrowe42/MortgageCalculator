@@ -12,45 +12,44 @@
   <script src="script.js" async></script>
 </head>
 <body>
-    <div class="containerouter"></div>
-    <div class="container">
-      <form class="inputform">
-        <p class="calctitle">Mortgage Calculator</p>
+  <div class="containerouter"></div>
+  <div class="container">
+    <form class="inputform">
+      <p class="calctitle">Mortgage Calculator</p>
 
-        <button id="clearall">Clear All</button><br>
+      <button id="clearall">Clear All</button><br>
         
-        <label for="amount">Mortgage Amount</label>
-        <div class="amountbox">
-          <input type="number" id="amount" name="amount" value="200000"><p class="tag">$</p>
-        </div>
-        <label for="term">Mortgage Term</label>
-        <div class="termbox">
-          <input type="number" id="term" name="term" value="5"><p class="tag">years</p>
-        </div>
-        <label for="rate">Interest Rate</label>
-        <div class="ratebox">
-          <input type="number" id="rate" name="rate" step=".25" value="5.25"><p class="tag">$</p>
-        </div>
-        <fieldset>
-          <legend>Mortgage Type</legend>
-          <div class="repaymentbox">
-            <input type="radio" id="repayment" name="mtype" checked="checked" value="Repayment">
-            <label for="repayment">Repayment</label>
-          </div>
-          <div class="interestonlybox">
-            <input type="radio" id="interestonly" name="mtype" value="Interest Only">
-            <label for="interestonly">Interest Only</label>
-          </div>
-        </fieldset>
-        <input id="submit" type="button" onclick="calculate()" value="Calculate Repayments">
-      </form>
-      <div id="results">
-        <img class="emptyimage" src="\assets\images\illustration-empty.svg">
-        <p class="emptytitle">Results shown here</p>
-        <p class="emptytext">Complete the form and click "calculate repayments" to see what your monthly repayments would be</p>
+      <label for="amount">Mortgage Amount</label>
+      <div class="amountbox">
+        <input type="number" id="amount" name="amount" value="200000"><p class="tag">$</p>
       </div>
+      <label for="term">Mortgage Term</label>
+      <div class="termbox">
+        <input type="number" id="term" name="term" value="5"><p class="tag">years</p>
+      </div>
+      <label for="rate">Interest Rate</label>
+      <div class="ratebox">
+        <input type="number" id="rate" name="rate" step=".25" value="5.25"><p class="tag">$</p>
+      </div>
+      <fieldset>
+        <legend>Mortgage Type</legend>
+        <div class="repaymentbox">
+          <input type="radio" id="repayment" name="mtype" checked="checked" value="Repayment">
+          <label for="repayment">Repayment</label>
+        </div>
+        <div class="interestonlybox">
+          <input type="radio" id="interestonly" name="mtype" value="Interest Only">
+          <label for="interestonly">Interest Only</label>
+        </div>
+      </fieldset>
+      <input id="submit" type="button" onclick="calculate()" value="Calculate Repayments">
+    </form>
+    <div id="results">
+      <img class="emptyimage" src="\assets\images\illustration-empty.svg">
+      <p class="emptytitle">Results shown here</p>
+      <p class="emptytext">Complete the form and click "calculate repayments" to see what your monthly repayments would be</p>
     </div>
-  
+  </div>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="https://www.linkedin.com/in/lucas-crowe-tu/">Lucas Crowe</a>.
