@@ -13,17 +13,17 @@
 </head>
 <body>
   <div class="containerouter"></div>
-  <div class="container">
+  <div class="container"  onkeypress="return enterPress(event)">
     <form class="inputform">
       <div class="formtopline">
         <p class="calctitle">Mortgage Calculator</p>
-        <button id="clearall">Clear All</button>
+        <button id="clearall" onclick="window.location.reload()">Clear All</button>
       </div>
       <div>
         <label for="amount">Mortgage Amount</label>
         <div class="amountbox">
           <p class="amounttag">$</p>
-          <input type="number" class="numinput" id="amount" name="amount" value="300000">
+          <input type="number" class="numinput" id="amount" name="amount" value="" min="0">
         </div>
         <output id="amounterror"></output>
       </div>
@@ -31,16 +31,16 @@
         <div>
           <label for="term">Mortgage Term</label>
           <div class="termbox">
-            <input type="number" class="numinput" id="term" name="term" value="25"><p class="termtag">years</p>
+            <input type="number" class="numinput" id="term" name="term" value=""><p class="termtag">years</p>
           </div>
           <output id="termerror"></output>
         </div>
         <div>
           <label for="rate">Interest Rate</label>
           <div class="ratebox">
-            <input type="number" class="numinput" id="rate" name="rate" step=".25" value="5.25"><p class="ratetag">%</p>
+            <input type="number" class="numinput" id="rate" name="rate" step=".25" value=""><p class="ratetag">%</p>
           </div>
-          <output id="amounterror"></output>
+          <output id="rateerror"></output>
         </div>
       </div>
       <fieldset>

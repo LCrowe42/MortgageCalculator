@@ -20,8 +20,19 @@ function calculate() {
     const term = document.getElementById("term").value;
     const rate = document.getElementById("rate").value / 100 / 12;
     const interestOnly = document.getElementById("interestonly").checked;
-    if (amount == '' || term == '' || rate == '') {
-        location.reload();
+    if (amount < 0 || term == '' || rate == '') {
+        if (amount == "" || amount < 0) {
+            const amounterror = document.getElementById("amounterror");
+            amounterror.textContent = "*Must contain a valid number";
+        }
+        if (term == '') {
+            const termerror = document.getElementById("termerror");
+            termerror.textContent = "*Must contain a valid number";
+        }
+        if (rate == '') {
+            const rateerror = document.getElementById("rateerror");
+            rateerror.textContent = "*Must contain a valid number";
+        }
     }
     else if (!interestOnly) {
         const numberOfPayments = term * 12;
@@ -37,7 +48,5 @@ function calculate() {
         const resultsContainer = document.getElementById("results");
         resultsContainer.innerHTML = generateResultsRepayment(repayments, total);
     }
-
-
-
 }
+
