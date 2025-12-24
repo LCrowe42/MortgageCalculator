@@ -16,21 +16,25 @@ function generateResultsRepayment(repayments, total) {
 }
 
 function calculate() {
+    const amounterror = document.getElementById("amounterror");
+    const termerror = document.getElementById("termerror");
+    const rateerror = document.getElementById("rateerror");
+    amounterror.textContent = "";
+    termerror.textContent = "";
+    rateerror.textContent = "";
+    
     const amount = document.getElementById("amount").value;
     const term = document.getElementById("term").value;
     const rate = document.getElementById("rate").value / 100 / 12;
     const interestOnly = document.getElementById("interestonly").checked;
-    if (amount < 0 || term == '' || rate == '') {
-        if (amount == "" || amount < 0) {
-            const amounterror = document.getElementById("amounterror");
+    if (amount < 0 || amount == "" || term == "" || rate == "") {
+        if (amount == "" || amount < 0) { 
             amounterror.textContent = "*Must contain a valid number";
         }
-        if (term == '') {
-            const termerror = document.getElementById("termerror");
+        if (term == "" || term < 0) {
             termerror.textContent = "*Must contain a valid number";
         }
-        if (rate == '') {
-            const rateerror = document.getElementById("rateerror");
+        if (document.getElementById("rate").value == "" || rate < 0) {
             rateerror.textContent = "*Must contain a valid number";
         }
     }
@@ -48,5 +52,6 @@ function calculate() {
         const resultsContainer = document.getElementById("results");
         resultsContainer.innerHTML = generateResultsRepayment(repayments, total);
     }
+    return false;
 }
 

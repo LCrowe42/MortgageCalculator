@@ -13,11 +13,11 @@
 </head>
 <body>
   <div class="containerouter"></div>
-  <div class="container"  onkeypress="return enterPress(event)">
-    <form class="inputform">
+  <div class="container">
+    <form class="inputform" onsubmit="return calculate()">
       <div class="formtopline">
         <p class="calctitle">Mortgage Calculator</p>
-        <button id="clearall" onclick="window.location.reload()">Clear All</button>
+        <button id="clearall" type="reset" onclick="window.location.reload()">Clear All</button>
       </div>
       <div>
         <label for="amount">Mortgage Amount</label>
@@ -54,7 +54,7 @@
           <label for="interestonly">Interest Only</label>
         </div>
       </fieldset>
-      <input id="submit" type="button" onclick="calculate()" value="Calculate Repayments">
+      <input id="submit" type="submit" value="Calculate Repayments">
     </form>
     <div id="results">
       <img class="emptyimage" src="\assets\images\illustration-empty.svg">
