@@ -96,18 +96,25 @@ input:focus {
     left: 10px;
 }
 #submit {
+    display: flex;
+    justify-content: space-around;
     background: rgb(220,220,50);
     border-color: rgb(220,220,50);
     border-radius: 15px;
     width: 250px;
     height: 30px;
     font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-weight: bold;
     cursor: pointer;
-    padding-bottom: 30px; 
 }
 #submit:hover {
     background-color: rgb(192, 192, 45);
+}
+.submittext {
+    position: relative;
+    bottom: 12px;
 }
 .repaymentbox, .interestonlybox {
     border: solid 2px rgb(131, 131, 131);
